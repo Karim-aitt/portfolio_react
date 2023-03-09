@@ -1,0 +1,68 @@
+#root {
+  --primary-button-color: #CDDBFE;
+  --secondary-button-color: #8DA2FB;
+  font-family: 'Outfit', sans-serif;
+}
+
+#nube{
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  left: -5%;
+  top: 100px;
+  animation: moving-nube 25s linear infinite;
+  overflow: hidden;
+  z-index: -2;
+}
+
+#nube_dos{
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  left: 60%;
+  top: 400px;
+  animation: moving-nube 37s linear infinite;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#nube_tres{
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  top: 600px;
+  animation: moving-nube 24s linear infinite;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#nube_cuatro{
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  left: -15%;
+  top: 150px;
+  animation: moving-nube 57s linear infinite;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#nube_cinco{
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  animation: moving-nube 13s linear infinite;
+  overflow: hidden;
+  z-index: -1;
+}
+
+@keyframes moving-nube {
+  0% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(100vw));
+  }
+}
