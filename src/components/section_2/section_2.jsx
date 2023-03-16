@@ -15,6 +15,9 @@ export const Section_2 = () => {
                         hover:shadow-xl 
                         hover:bg-indigo-400 
                         hover:font-bold
+						dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                         "
 					>
 						Spend Control
@@ -31,6 +34,9 @@ export const Section_2 = () => {
                         hover:shadow-xl 
                         hover:bg-indigo-400 
                         hover:font-bold
+						dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                         "
 					>
 						Crypto Calculator
@@ -47,6 +53,9 @@ export const Section_2 = () => {
                     hover:shadow-xl 
                     hover:bg-indigo-400 
                     hover:font-bold
+					dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                     "
 					>
 						Simple CRM

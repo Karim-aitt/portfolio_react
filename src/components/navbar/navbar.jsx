@@ -3,19 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 
-export const Navbar = ({setDark}) => {
-
-	let isDark = setDark;
-
-	const handleClick = () => {
-		
-		console.log({setDark});
-		if(isDark == true){
-			setDark(false)
-		} else{
-			setDark(true)
-		}
-	}
+export const Navbar = ({toggleDark}) => {
 
 
 	return (
@@ -34,7 +22,10 @@ export const Navbar = ({setDark}) => {
 				className="
                 flex
                 bg-slate-300
-                hover:bg-indigo-300 
+                hover:bg-indigo-300
+				dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                 font-medium
                 hover:font-bold
                 py-2 
@@ -64,7 +55,10 @@ export const Navbar = ({setDark}) => {
 				className="
                 flex
                 bg-slate-300
-                hover:bg-indigo-300 
+                hover:bg-indigo-300
+				dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                 font-medium 
                 hover:font-bold
                 py-2 
@@ -94,7 +88,10 @@ export const Navbar = ({setDark}) => {
 				className="
                 flex
                 bg-slate-300 
-                hover:bg-indigo-300 
+                hover:bg-indigo-300
+				dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                 font-medium
                 hover:font-bold
                 py-2 
@@ -120,17 +117,20 @@ export const Navbar = ({setDark}) => {
 				Contact Me!
 			</Link>
 
-			{/* <button
+			<button
 				className="
                 flex
                 bg-slate-300
-                hover:bg-indigo-300 
+                hover:bg-indigo-300
+				dark:bg-slate-500
+				dark:text-slate-300
+				dark:hover:bg-slate-800
                 font-medium
                 hover:font-bold
                 py-2 
                 px-4 
                 rounded"
-				onClick={handleClick}
+				onClick={toggleDark}
 			>
 				<svg
                     className="w-6 mr-1"
@@ -148,7 +148,7 @@ export const Navbar = ({setDark}) => {
 					></path>
 				</svg>
 				Toggle Dark Mode
-			</button> */}
+			</button>
 		</div>
 	);
 };

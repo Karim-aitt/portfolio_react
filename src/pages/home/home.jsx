@@ -11,11 +11,18 @@ export const Home = () => {
 	return (
 		<div>
 			{/* <Navbar /> */}
-			<h1 className="my-10 md:my-14 font-bold text-4xl md:text-5xl">Hi, I'm Karim</h1>
+			<h1 className="my-10 md:my-14 font-bold text-4xl md:text-5xl dark:text-slate-200">
+				Hi, I'm Karim
+			</h1>
 			<Section_1 />
-            <h2 className="my-10 md:my-14 font-bold text-3xl md:text-4xl">Projects</h2>
+			<h2 className="my-10 md:my-14 font-bold text-3xl md:text-4xl dark:text-slate-200">
+				Projects
+			</h2>
 			<Section_2 />
-			<div id="separator" className="border-slate-300 border-solid border-b-[2px] mx-auto my-10 w-90 rounded"/>
+			<div
+				id="separator"
+				className="border-slate-300 border-solid border-b-[2px] mx-auto my-10 w-90 rounded dark:border-slate-500"
+			/>
 			<Projects />
 		</div>
 	);

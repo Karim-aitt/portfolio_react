@@ -3,11 +3,11 @@ export const Crm = () => {
 		<div>
 			<a
 				href="https://reliable-valkyrie-b34511.netlify.app/"
-				className="text-indigo-600 hover:underline"
+				className="text-indigo-600 dark:text-indigo-300 hover:underline"
 			>
 				<h3 className="text-xl font-semibold">CRM</h3>
 			</a>
-			<p className="text-lg">
+			<p className="text-lg dark:text-slate-300">
             This project is a simple CRM for anyone where the user (administrator) can administrate his clients.
 			</p>
 
@@ -31,9 +31,9 @@ export const Crm = () => {
 				</div>
 
 				<div className="flex gap-3 flex-wrap mt-2">
-					<span className="rounded-full bg-blue-300 px-5 py-1">React</span>
-					<span className="rounded-full bg-blue-400  px-5 py-1">Css</span>
-					<span className="rounded-full bg-purple-400  px-5 py-1">Json Server</span>
+					<span className="rounded-full bg-slate-300  hover:bg-blue-300 px-5 py-1">React</span>
+					<span className="rounded-full bg-slate-300  hover:bg-blue-400  px-5 py-1">Css</span>
+					<span className="rounded-full bg-slate-300  hover:bg-purple-400  px-5 py-1">Json Server</span>
 				</div>
 			</div>
 		</div>

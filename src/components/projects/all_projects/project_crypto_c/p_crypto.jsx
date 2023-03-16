@@ -3,11 +3,11 @@ export const Crypto = () => {
 		<div>
 			<a
 				href="https://subtle-meerkat-46f7db.netlify.app/"
-				className="text-indigo-600 hover:underline"
+				className="text-indigo-600 dark:text-indigo-300 hover:underline"
 			>
 				<h3 className="text-xl font-semibold">Crypto Calculator</h3>
 			</a>
-			<p className="text-lg">
+			<p className="text-lg dark:text-slate-300">
 				Real-Time crypto currency calculator using public API, React and Style
 				Components.
 			</p>
@@ -32,12 +32,12 @@ export const Crypto = () => {
 				</div>
 
 				<div className="flex gap-3 flex-wrap mt-2">
-					<span className="rounded-full bg-blue-300 px-5 py-1">React</span>
-					<span className="rounded-full bg-blue-400  px-5 py-1">Css</span>
-					<span className="rounded-full bg-green-400  px-5 py-1">
+					<span className="rounded-full bg-slate-300  hover:bg-blue-300 px-5 py-1">React</span>
+					<span className="rounded-full bg-slate-300  hover:bg-blue-400  px-5 py-1">Css</span>
+					<span className="rounded-full bg-slate-300  hover:bg-green-400  px-5 py-1">
 						Style Components
 					</span>
-					<span className="rounded-full bg-yellow-200 px-5 py-1">
+					<span className="rounded-full bg-slate-300  hover:bg-yellow-200 px-5 py-1">
 						Public API
 					</span>
 				</div>

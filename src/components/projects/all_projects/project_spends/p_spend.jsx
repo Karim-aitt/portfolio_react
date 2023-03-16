@@ -5,11 +5,11 @@ export const Spends = () =>{
         <div>
 				<a
 					href="https://beautiful-paprenjak-3aaa26.netlify.app/"
-					className="text-indigo-600 hover:underline"
+					className="text-indigo-600 dark:text-indigo-300 hover:underline"
 				>
 					<h3 className="text-xl font-semibold">Spend Control</h3>
 				</a>
-				<p className="text-lg">Simple app to control your life spends.</p>
+				<p className="text-lg dark:text-slate-300">Simple app to control your life spends.</p>
 
 				<div className="flex gap-3">
 					<svg
@@ -28,9 +28,9 @@ export const Spends = () =>{
 						></path>
 					</svg>
 					<div className="flex gap-3 flex-wrap mt-2">
-						<span className="rounded-full bg-blue-300 px-5 py-1">React</span>
-						<span className="rounded-full bg-yellow-200 px-5 py-1">Vite</span>
-						<span className="rounded-full bg-blue-400  px-5 py-1">Css</span>
+						<span className="rounded-full bg-slate-300  hover:bg-blue-300 px-5 py-1">React</span>
+						<span className="rounded-full bg-slate-300  hover:bg-yellow-200 px-5 py-1">Vite</span>
+						<span className="rounded-full bg-slate-300  hover:bg-blue-400  px-5 py-1">Css</span>
 					</div>
 				</div>
 			</div>

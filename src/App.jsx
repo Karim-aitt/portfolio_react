@@ -10,32 +10,63 @@ import { Navbar } from "./components/navbar/navbar";
 import "./App.css";
 
 function App() {
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [theme, setTheme] = useState("light")
 
 	useEffect(() => {
-		setIsDarkMode(
-			window.matchMedia &&
-				window.matchMedia("(prefers-color-scheme: dark)").matches
-		);
-	}, []);
+		if (localStorage.theme === 'dark') {
+			document.documentElement.classList.add('dark')
+			setTheme("dark")
+		  } else {
+			document.documentElement.classList.remove('dark')
+			setTheme("light")
+		  }
+	}, [])
 
-  useEffect(() => {
-    let isDark = localStorage.getItem('dark')
-    if(isDark == true || isDark == 'true'){
-      setIsDarkMode(true)
-      localStorage.setItem('dark', 'true')
-    } else {
-      setIsDarkMode(false)
-      localStorage.setItem('dark', 'false')
-    }
-  }, [])
+	useEffect(() => {
+		if(theme === "dark"){
+			document.documentElement.classList.add("dark");
+			localStorage.setItem('theme', 'dark')
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	}, [theme])
 
-  const handleDark = (value) => {
-    setIsDarkMode(value);
-    console.log(isDarkMode)
-  }
-  
+	const handleThemeSwitch = () => {
+		if(theme === "dark"){
+			setTheme("light")
+			localStorage.removeItem("theme")
+		} else {
+			setTheme("dark")
+			localStorage.setItem("theme", "dark")
+		}
+		
+	}
 
+	
+
+	// useEffect(() => {
+	// 	let isDark = localStorage.getItem("dark");
+
+	// 	if (isDark == true || isDark == "true") {
+	// 		setIsDarkMode(true);
+	// 		localStorage.setItem("dark", "true");
+	// 	} else {
+	// 		setIsDarkMode(false);
+	// 		localStorage.setItem("dark", "false");
+	// 	}
+	// }, []);
+
+	// const handleDark = () => {
+	// 	if (isDarkMode === true) {
+	// 		// setIsDarkMode(false);
+	// 		document.documentElement.classList.add('dark');
+	// 		// localStorage.setItem("dark", "false");
+	// 	} else {
+	// 		// setIsDarkMode(true);
+	// 		document.documentElement.classList.remove('dark');
+	// 		// localStorage.setItem("dark", "true");
+	// 	}
+	// };
 
 	return (
 		<BrowserRouter>
@@ -123,15 +154,11 @@ function App() {
 			</div>
 
 			<div
-				className={
-					isDarkMode
-						? `
-		          max-w-[730px] pt-14 pb-10 px-5 mb-10 mt-5 mx-7 md:mx-auto bg-blue-900 div_shadow border-2 border-black`
-						: `
-              max-w-[730px] pt-14 pb-10 px-5 mb-10 mt-5 mx-7 md:mx-auto bg-white div_shadow border-2 border-black`
-				}
-			>
-				<Navbar setDark={handleDark}/>
+				className="max-w-[730px] pt-14 pb-10 px-5 mb-10 mt-5 mx-7 md:mx-auto div_shadow border-2 rounded
+				 bg-white border-black
+				 dark:bg-slate-700 
+			">
+				<Navbar toggleDark={handleThemeSwitch} />
 				<Routes>
 					<Route exact path="/" element={<Home />}></Route>
 					<Route path="/about" element={<About />}></Route>
